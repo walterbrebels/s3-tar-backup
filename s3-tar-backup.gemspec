@@ -10,7 +10,7 @@ spec = Gem::Specification.new do |s|
   s.license = 'MIT'
   s.authors = ['Antony Male']
   s.email = 'antony dot mail at gmail'
-  s.required_ruby_version = '>= 1.9.2'
+  s.required_ruby_version = '>= 1.8.7'
 	s.homepage = 'http://github.com/canton7/s3-tar-backup'
 
   s.add_dependency 'aws-sdk', '~> 1.0'

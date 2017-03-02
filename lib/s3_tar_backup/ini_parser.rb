@@ -192,7 +192,7 @@ module S3TarBackup
 		end
 
 		def find_sections(pattern=/.*/)
-			@config.select{ |k,v| k =~ pattern }
+			Hash[@config.select{ |k,v| k.to_s =~ pattern }]
 		end
 
 		def each

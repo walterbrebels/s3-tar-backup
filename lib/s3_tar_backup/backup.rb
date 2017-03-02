@@ -68,7 +68,7 @@ module S3TarBackup
 
 			return {
 				:type => match[8].to_sym,
-				:date => Time.new(match[2].to_i, match[3].to_i, match[4].to_i, match[5].to_i, match[6].to_i, match[7].to_i),
+				:date => Time.local(match[2].to_i, match[3].to_i, match[4].to_i, match[5].to_i, match[6].to_i, match[7].to_i),
 				:name => name,
 				:ext => match[9],
 				:size => object.content_length,

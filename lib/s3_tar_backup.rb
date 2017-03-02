@@ -79,7 +79,7 @@ module S3TarBackup
 
 		def connect_s3(access_key, secret_key, region)
 			warn "No AWS region specified (config key settings.s3_region). Assuming eu-west-1" unless region
-			AWS::S3.new(access_key_id: access_key, secret_access_key: secret_key, region: region || 'eu-west-1')
+			AWS::S3.new(:access_key_id => access_key, :secret_access_key => secret_key, :region => region || 'eu-west-1')
 		end
 
 		def gen_backup_config(profile, config)
